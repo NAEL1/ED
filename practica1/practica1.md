@@ -99,3 +99,21 @@ linea 7: 2 OE
 	}
 	delete [] v;// Liberamos memoria dinámica
 ```
+
+
+### Crear un script ejecuciones_ordenacion.sh en bash que permite ejecutar varias veces el programa anterior y generar un fichero con los datos obtenidos.
+
+```bash
+	#! /bin/bash
+
+	inicio = 100
+	fin = 30000
+	incremento = 500
+
+	i= $inicio
+
+	while($i <= $fin)
+		echo `./ordenacion.cpp $i 10000` >> t_ordenacion.dat
+	end	
+
+```
