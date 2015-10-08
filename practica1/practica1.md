@@ -1,7 +1,7 @@
 # Practica1
 
 
-Procesador: Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
+`Procesador: Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
 Memoria:
        tamaño: 3836Mi
 Disco: ATA Disk
@@ -10,7 +10,9 @@ Disco: ATA Disk
        serie: TEA55C5G0V2GMN
        tamaño: 465GiB (500GB)
 
-compilador: gcc v 4.9.4
+compilador: g++ version 4.9.2
+
+SO: 3.19.0-30-generic #34-Ubuntu  x86_64 GNU/Linux`
 
 
 ## Ejercicio1:
@@ -28,8 +30,10 @@ compilador: gcc v 4.9.4
 8			}
 9  }
 ``` 
-Calcule la eficiencia teórica de este algoritmo:
-`
+###Calcule la eficiencia teórica de este algoritmo:
+
+
+```
 linea 2: 4 OE de las cuales 1 se ejecuta 1 vez( int i=0)
 
 linea 3: 4 OE de las cuales 1 se ejecuta 1 vez( int j=0)
@@ -41,11 +45,20 @@ linea 5: 3 OE
 linea 6: 3 OE
 
 linea 7: 2 OE
-`
+```
+
+
+			
+
 ![pr1-1](https://github.com/NAEL1/ED/blob/master/practica1/pr1-1.png)
+
 
 ###Crear un fichero ordenacion.cpp
 
+Compilado con : 
+```bash
+g++ -o ordenacion  ordenacion.cpp -std=c++11
+```
 ```c++
 	#include <iostream>
 	#include <chrono>// Recursos para medir tiempos
@@ -108,7 +121,8 @@ linea 7: 2 OE
 	i= $inicio
 
 	while($i <= $fin)
-		echo `./ordenacion.cpp $i 10000` >> t_ordenacion.dat
+		echo `./ordenacion $i 10000` >> t_ordenacion.dat
 	end	
 
 ```
+

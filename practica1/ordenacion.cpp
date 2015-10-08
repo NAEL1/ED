@@ -1,9 +1,11 @@
 #include <iostream>
 #include <ctime>
+#include <ratio>
 #include <chrono>
 // Recursos para medir tiempos
 #include <cstdlib> // Para generación de números pseudoaleatorios
 using namespace std;
+using namespace std::chrono;
 
 void ordenar(int *v, int n) {
 	for (int i=0; i<n-1; i++)
@@ -46,10 +48,10 @@ ordenar(v,tam);
 //clock_t tfin;
 //tfin=clock();
 high_resolution_clock::time_point end = high_resolution_clock::now();
-duration<double> tiempo = duration_cast<duration<double>>(tstart - end);
+duration<double> tiempo = duration_cast<duration<double>>(start - end);
 // Anotamos el tiempo de finalización
 // Mostramos resultados (Tamaño del vector y tiempo de ejecución en seg.)
 cout << tam << "\t" << tiempo.count() << endl;
+delete [] v;// Liberamos memoria dinámica
+
 }
-delete [] v;
-// Liberamos memoria dinámica
