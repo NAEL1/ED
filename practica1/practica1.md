@@ -17,12 +17,12 @@ El siguiente código realiza la ordenación mediante el algoritmo de la burbuja:
 ``` 
 Calcule la eficiencia teórica de este algoritmo:
 `
-linea 2: 4 OE de las cuales 1 se ejecuta 1 vez( int i=0)
-linea 3: 4 OE de las cuales 1 se ejecuta 1 vez( int j=0)
-linea 4: 3 OE
-linea 5: 3 OE
-linea 6: 3 OE
-linea 7: 2 OE
+>linea 2: 4 OE de las cuales 1 se ejecuta 1 vez( int i=0)
+>linea 3: 4 OE de las cuales 1 se ejecuta 1 vez( int j=0)
+>linea 4: 3 OE
+>linea 5: 3 OE
+>linea 6: 3 OE
+>linea 7: 2 OE
 `
 
 ![pr1-1](https://github.com/NAEL1/ED/blob/master/practica1/pr1-1.png)
