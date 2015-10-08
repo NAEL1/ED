@@ -265,7 +265,7 @@ linea 13: 1 OE (devolucion)
 
 ```
 
-![pr1-2](https://github.com/NAEL1/ED/blob/master/practica1/pr1-3.png)
+![pr1-2](https://github.com/NAEL1/ED/blob/master/practica1/pr1-2.png)
 
 ####Calcule su eficiencia empírica.
 primero modificamos el cpp proporcionado para tener unas medidas mas precisas
@@ -337,4 +337,9 @@ int main(int argc, char * argv[])
   
   delete [] v;     // Liberamos memoria dinámica
 }
+```
+
+Compilado con : 
+```bash
+g++ -o ejercicio_desc  ejercicio_desc.cpp -std=c++11
 ```

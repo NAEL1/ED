@@ -35,7 +35,8 @@ replot
 f(x)=14*x*x+3*x+2
 set title "Eficiencia teorica Vs Eficiencia emperica"
 plot 't_ordenacion.dat' with points  title "Eficiencia emperica" ,f(x) with lines linecolor rgbg title "Eficiencia teorica"
-
+set output "teorica vs emperica.png"
+replot
 #Generanos graficos eficiencia de insercion
 
 #unset label
