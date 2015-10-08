@@ -25,4 +25,4 @@ linea 6: 3 OE
 linea 7: 2 OE
 
 
-!(pr1-1)(https://github.com/NAEL1/ED/blob/master/practica1/pr1-1.png)
+![pr1-1](https://github.com/NAEL1/ED/blob/master/practica1/pr1-1.png)
