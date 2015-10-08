@@ -61,7 +61,7 @@ Compilado con :
 g++ -o ordenacion  ordenacion.cpp -std=c++11
 ```
 ```c++
-	#include <iostream>
+#include <iostream>
 #include <ctime>
 #include <ratio>
 #include <chrono>
@@ -174,8 +174,8 @@ replot
 ```
 Graficas:
 
-![burbuja.png]()
-![curva ajustada burbuja.png]()
+![burbuja.png](https://github.com/NAEL1/ED/blob/master/practica1/burbuja.png)
+![curva ajustada burbuja.png](https://github.com/NAEL1/ED/blob/master/practica1/curva%20ajustada%20burbuja.png)
 
 Funcion de ajuste:
 `
