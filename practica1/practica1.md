@@ -1,7 +1,7 @@
 # Practica1
 
-
-`Procesador: Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
+```
+Procesador: Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
 Memoria:
        tamaño: 3836Mi
 Disco: ATA Disk
@@ -12,7 +12,8 @@ Disco: ATA Disk
 
 compilador: g++ version 4.9.2
 
-SO: 3.19.0-30-generic #34-Ubuntu  x86_64 GNU/Linux`
+SO: 3.19.0-30-generic #34-Ubuntu  x86_64 GNU/Linux
+```
 
 
 ## Ejercicio1:
