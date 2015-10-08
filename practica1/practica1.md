@@ -181,6 +181,22 @@ replot
 Graficas:
 
 ![burbuja.png](https://github.com/NAEL1/ED/blob/master/practica1/burbuja.png)
+
+
+### Pruebe a dibujar superpuestas la función con la eficiencia teórica y la empírica. ¿Qué
+sucede?
+
+![emperiva vs teorica](https://github.com/NAEL1/ED/blob/master/practica1/teorica%20vs%20emperica.png)
+
+
+tal como se ve en la grafica la funcion  teorica  esta mal ajustada ya que acota muy por encima a la curva teorica .
+
+## Ejercicio 2: Ajuste en la ordenación de la burbuja
+
+###Replique el experimento de ajuste por regresión a los resultados obtenidos en el ejercicio
+1 que calculaba la eficiencia del algoritmo de ordenación de la burbuja. Para ello
+considere que f(x) es de la forma ax2+bx+c
+
 ![curva ajustada burbuja.png](https://github.com/NAEL1/ED/blob/master/practica1/curva%20ajustada%20burbuja.png)
 
 Funcion de ajuste:
@@ -191,11 +207,3 @@ a               = 3.76715e-09      +/- 4.677e-11    (1.241%)
 b               = -5.06617e-06     +/- 1.435e-06    (28.33%)
 c               = -0.00100904      +/- 0.009223     (914%)
 ```
-
-### Pruebe a dibujar superpuestas la función con la eficiencia teórica y la empírica. ¿Qué
-sucede?
-
-![emperiva vs teorica]()
-
-
-tal como se ve en la grafica la funcion  teorica  esta mal ajustada ya que acota muy por encima a la curva teorica .exi
