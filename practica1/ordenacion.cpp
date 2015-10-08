@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+#include <chrono>
 // Recursos para medir tiempos
 #include <cstdlib> // Para generación de números pseudoaleatorios
 using namespace std;
@@ -36,15 +37,19 @@ int *v=new int[tam];// Reserva de memoria
 srand(time(0));// Inicialización generador números pseudoaleatorios
 for (int i=0; i<tam; i++) // Recorrer vector
 	v[i] = rand() % vmax; // Generar aleatorio [0,vmax[
-clock_t tini;
-tini=clock();// Anotamos el tiempo de inicio
+
+//clock_t tini;
+//tini=clock();// Anotamos el tiempo de inicio
 //int x = vmax+1; // Buscamos un valor que no está en el vector
+high_resolution_clock::time_point start = high_resolution_clock::now();
 ordenar(v,tam);
-clock_t tfin;
-tfin=clock();
+//clock_t tfin;
+//tfin=clock();
+high_resolution_clock::time_point end = high_resolution_clock::now();
+duration<double> tiempo = duration_cast<duration<double>>(tstart - end);
 // Anotamos el tiempo de finalización
 // Mostramos resultados (Tamaño del vector y tiempo de ejecución en seg.)
-cout << tam << "\t" << (tfin-tini)/(double)CLOCKS_PER_SEC << endl;
+cout << tam << "\t" << tiempo.count() << endl;
 }
 delete [] v;
 // Liberamos memoria dinámica
