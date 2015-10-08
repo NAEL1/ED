@@ -25,4 +25,4 @@ linea 6: 3 OE
 linea 7: 2 OE
 
 
-T( n )= 2+ sum from{0} to{n-1}  3+ (sum from{0} to{n-1} 3+3+3+3+2)
+!(pr1-1)(https://github.com/NAEL1/ED/blob/master/practica1/pr1-1.png)
