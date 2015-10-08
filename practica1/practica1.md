@@ -193,8 +193,7 @@ tal como se ve en la grafica la funcion  teorica  esta mal ajustada ya que acota
 
 ## Ejercicio 2: Ajuste en la ordenación de la burbuja
 
-###Replique el experimento de ajuste por regresión a los resultados obtenidos en el ejercicio
-1 que calculaba la eficiencia del algoritmo de ordenación de la burbuja. Para ello
+###Replique el experimento de ajuste por regresión a los resultados obtenidos en el ejercicio1 que calculaba la eficiencia del algoritmo de ordenación de la burbuja. Para ello
 considere que f(x) es de la forma ax2+bx+c
 
 ![curva ajustada burbuja.png](https://github.com/NAEL1/ED/blob/master/practica1/curva%20ajustada%20burbuja.png)
@@ -207,3 +206,33 @@ a               = 3.76715e-09      +/- 4.677e-11    (1.241%)
 b               = -5.06617e-06     +/- 1.435e-06    (28.33%)
 c               = -0.00100904      +/- 0.009223     (914%)
 ```
+
+##Ejercicio 3: Problemas de precisión:
+
+###Junto con este guión se le ha suministrado un fichero ejercicio_desc.cpp. En él se ha implementado un algoritmo. Se pide que:
+
+####Explique qué hace este algoritmo.
+
+Es un algoritmo de busqueda binario: mira si el valor buscado se encuentra en la mitad del vector sino compara el valor buscado con el valor que se encuentra en la mitad del vector si en menor, actliza el extremo superior del vector al valor medio mas 1, en cambio si es mallor que el valor medio actualiza el extremo inferior al valor medio menor uno.
+
+#### Calcule su eficiencia teórica:
+
+1 int operacion(int *v, int n, int x, int inf, int sup) {
+2 int med;
+3  bool enc=false;
+4  while ((inf<sup) && (!enc)) {
+5    med = (inf+sup)/2; 
+6    if (v[med]==x) 
+7      enc = true;
+8    else if (v[med] < x) 
+9      inf = med+1;
+10   else
+11      sup = med-1;
+12  }
+13  if (enc) 
+14    return med;
+15  else 
+16    return -1;
+17 }
+
+``` 
