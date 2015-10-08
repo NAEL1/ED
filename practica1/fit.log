@@ -1,0 +1,49 @@
+
+
+*******************************************************************************
+Thu Oct  8 22:23:34 2015
+
+
+FIT:    data read from 't_ordenacion.dat'
+        format = z
+        #datapoints = 60
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 9.478e+18         delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 2.29458e+08
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 0.0336136
+rel. change during last iteration : -1.22891e-11
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.024284
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000589712
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 3.76715e-09      +/- 4.677e-11    (1.241%)
+b               = -5.06617e-06     +/- 1.435e-06    (28.33%)
+c               = -0.00100904      +/- 0.009223     (914%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.968  1.000 
+c               0.738 -0.861  1.000 
