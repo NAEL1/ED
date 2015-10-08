@@ -48,7 +48,7 @@ ordenar(v,tam);
 //clock_t tfin;
 //tfin=clock();
 high_resolution_clock::time_point end = high_resolution_clock::now();
-duration<double> tiempo = duration_cast<duration<double>>(start - end);
+duration<double> tiempo = duration_cast<duration<double>>(end-start);
 // Anotamos el tiempo de finalización
 // Mostramos resultados (Tamaño del vector y tiempo de ejecución en seg.)
 cout << tam << "\t" << tiempo.count() << endl;
