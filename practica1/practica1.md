@@ -171,6 +171,12 @@ set terminal png
 set output "curva ajustada burbuja.png"
 replot
 
+f(x)=14*x*x+3*x+2
+set title "Eficiencia teorica Vs Eficiencia emperica"
+plot 't_ordenacion.dat' with points  title "Eficiencia emperica" ,f(x) with lines linecolor rgbg title "Eficiencia teorica"
+set output "teorica vs emperica.png"
+replot
+
 ```
 Graficas:
 
@@ -178,8 +184,18 @@ Graficas:
 ![curva ajustada burbuja.png](https://github.com/NAEL1/ED/blob/master/practica1/curva%20ajustada%20burbuja.png)
 
 Funcion de ajuste:
-`
+```
+f(x)= a*x*x+b*x+c
+
 a               = 3.76715e-09      +/- 4.677e-11    (1.241%)
 b               = -5.06617e-06     +/- 1.435e-06    (28.33%)
 c               = -0.00100904      +/- 0.009223     (914%)
-`
+```
+
+### Pruebe a dibujar superpuestas la función con la eficiencia teórica y la empírica. ¿Qué
+sucede?
+
+![emperiva vs teorica]()
+
+
+tal como se ve en la grafica la funcion  teorica  esta mal ajustada ya que acota muy por encima a la curva teorica .exi

@@ -8,7 +8,7 @@ unset log                              # remove any log-scaling
 unset label                            # remove any previous labels
 set xtic auto                          # set xtics automatically
 set ytic auto                          # set ytics automatically
-
+set xrange [100:30000]
 
 #Generamos graficos de burbuja
 unset label
@@ -31,6 +31,10 @@ plot 't_ordenacion.dat'with points ,f(x) with lines linecolor rgb "green" title 
 set terminal png
 set output "curva ajustada burbuja.png"
 replot
+
+f(x)=14*x*x+3*x+2
+set title "Eficiencia teorica Vs Eficiencia emperica"
+plot 't_ordenacion.dat' with points  title "Eficiencia emperica" ,f(x) with lines linecolor rgbg title "Eficiencia teorica"
 
 #Generanos graficos eficiencia de insercion
 
