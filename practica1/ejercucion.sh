@@ -1,12 +1,16 @@
-!# /bin/bash
+#!/bin/bash
 
-inicio=100
-fin=30000
-incremento=500
+declare -i INICIO
 
-let i=inicio
+INICIO=100
 
-while($i <= $fin)
-	echo `./ordenacion.cpp $i 10000` >> t_ordenacion.datet
-	let i+=incremento
-end
+echo $-inicio
+#FIN=30000
+#INCREMENTO=500
+
+#let i=$INICIO
+
+#while($i <= $FIN)
+#	echo `./ordenacion.cpp $i 10000` >> t_ordenacion.datet
+#	let i+=INCREMENTO
+#end
