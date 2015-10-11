@@ -343,3 +343,10 @@ Compilado con :
 ```bash
 g++ -o ejercicio_desc  ejercicio_desc.cpp -std=c++11
 ```
+![Busquedabin_aria](https://github.com/NAEL1/ED/blob/master/practica1/Busquedabin_aria.png)
+
+####Si visualiza la eficiencia empírica debería notar algo anormal. Explíquelo y proponga una solución. Compruebe que su solución es correcta. Una vez resuelto el problema realice la regresión para ajustar la curva teórica a la empírica.
+
+se observan picos irregulares, la grafica tiene mucho ruido.
+eso esta debido a que el vector no esta ordenado. para solucionar este problema deberiamos ordenar el vector antes de aplicar la busqueda binaria.
+
