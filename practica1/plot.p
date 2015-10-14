@@ -15,7 +15,7 @@ unset label
 set xlabel "Tamanio"
 set ylabel "Tiempo (seg)"
 #set title "Eficiencia Burbuja"
-#
+
 #plot 't_ordenacion.dat' with lines linecolor rgb "blue"
 
 #set terminal png
@@ -61,7 +61,13 @@ set ylabel "Tiempo (seg)"
 #set output "peorcaso.png"
 #replot
 
-plot 't_ordenacion.dat'with lines linecolor rgb "blue" title "caso_normal" ,'t_peorcaso.dat' with lines linecolor rgb "red" title "peor_caso", 't_mejorcaso.dat' with lines linecolor rgb "green" title "mejor_caso"
+#plot 't_ordenacion.dat'with lines linecolor rgb "blue" title "caso_normal" ,'t_peorcaso.dat' with lines linecolor rgb "red" title "peor_caso", 't_mejorcaso.dat' with lines linecolor rgb "green" title "mejor_caso"
+#set terminal png
+#set output "comparativa_burbuja.png"
+#replot
+
+set title "Eficiencia nueva Burbuja"
+plot 't_nueva_burbuja.dat' with lines linecolor rgb "blue"
 set terminal png
-set output "comparatica_burbuja.png"
+set output "nueva_burbuja.png"
 replot

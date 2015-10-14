@@ -1,5 +1,7 @@
 # Practica1
 
+# enlace: https://github.com/NAEL1/ED/blob/master/practica1/
+
 ```
 Procesador: Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
 Memoria:
@@ -354,6 +356,7 @@ eso esta debido a que el vector no esta ordenado. para solucionar este problema 
 
 
 ##Ejercicio 4: Mejor y peor caso
+
 ###Retome el ejercicio de ordenación mediante el algoritmo de la burbuja. Debe modificar el código que genera los datos de entrada para situarnos en dos escenarios diferentes:
 
 ####El mejor caso posible. Para este algoritmo, si la entrada es un vector que ya está ordenado el tiempo de cómputo es menor ya que no tiene que intercambiar ningún elemento.
@@ -397,4 +400,56 @@ La grafica seria:
 
 Finalmente comparando los datos obtenidos con los del ejercicio uno obtenemos la siguiente grafica
 
-![comparativa](https://github.com/NAEL1/ED/blob/master/practica1/comparatica_burbuja.png)
+![comparativa](https://github.com/NAEL1/ED/blob/master/practica1/comparativa_burbuja.png)
+
+##Ejercicio 5: Dependencia de la implementación
+
+###Considere esta otra implementación del algoritmo de la burbuja:
+
+```c++
+1	void ordenar(int *v, int n) {
+2		bool cambio=true;
+3		for (int i=0; i<n-1 && cambio; i++) {
+4			cambio=false;
+5			for (int j=0; j<n-i-1; j++)
+6				if (v[j]>v[j+1]) {
+7					cambio=true;
+8					int aux = v[j];
+9					v[j] = v[j+1];
+10					v[j+1] = aux;
+11				}
+12		}
+13	}
+
+```
+En ella se ha introducido una variable que permite saber si, en una de las iteraciones del bucle externo no se ha modificado el vector. Si esto ocurre significa que ya está ordenado y no hay que continuar.
+
+#### Considere ahora la situación del mejor caso posible en la que el vector de entrada ya está ordenado. ¿Cuál sería la eficiencia teórica en ese mejor caso? Muestre la gráfica con la eficiencia empírica y compruebe si se ajusta a la previsión.
+
+```
+linea  2: 1 OE (asignacion)
+
+linea  3: 5 OE (asignacion, comparacion,operacion &&, comparacion, incremento )
+
+linea  4: 1 OE (asignacion)
+
+linea  5: 3 OE (asignacion, comparacion, incremento )
+
+linea  6: 1 OE (comparacion)
+
+```
+
+![pr1-3](https://github.com/NAEL1/ED/blob/master/practica1/pr1-3.png)
+
+
+Compilamos el cpp:
+
+```bash
+	g++ -o nueva_burbuja  nueva_burbuja.cpp -std=c++11
+```
+
+La grafica de laeficiencia empírica es:
+
+nueva_burbuja
+
+![nueva_burbuja](https://github.com/NAEL1/ED/blob/master/practica1/nueva_burbuja.png)
