@@ -48,20 +48,16 @@ set ylabel "Tiempo (seg)"
 
 
 #set title "burbuja_mejor_caso"
+
 #plot 't_mejorcaso.dat' with lines linecolor rgb "green" title "mejor_caso"
 #set terminal png
 #set output "mejorcaso.png"
-#replot
 
+#plot 'Datos_insercion.dat' with lines linecolor rgb "blue"
 
 
 #set title "burbuja_peor_caso"
-#plot 't_peorcaso.dat' with lines linecolor rgb "red" title "peor_caso"
+
+#plot 't_peorcaso.dat' with lines linecolor rgb "green" title "mejor_caso"
 #set terminal png
 #set output "peorcaso.png"
-#replot
-
-plot 't_ordenacion.dat'with lines linecolor rgb "blue" title "caso_normal" ,'t_peorcaso.dat' with lines linecolor rgb "red" title "peor_caso", 't_mejorcaso.dat' with lines linecolor rgb "green" title "mejor_caso"
-set terminal png
-set output "comparatica_burbuja.png"
-replot

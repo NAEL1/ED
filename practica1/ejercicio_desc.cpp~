@@ -57,10 +57,15 @@ int main(int argc, char * argv[])
   for (int i=0; i<tam; i++)  // Recorrer vector
     v[i] = rand() % tam;
   
+  //clock_t tini;    // Anotamos el tiempo de inicio
+  //tini=clock();
   ordenar(v,tam); // ordenamos el vector
- 
   high_resolution_clock::time_point start = high_resolution_clock::now();
-  operacion(v,tam,tam+1,0,tam-1); // Algoritmo a evaluar
+  // Algoritmo a evaluar
+  operacion(v,tam,tam+1,0,tam-1);
+  
+  //clock_t tfin;    // Anotamos el tiempo de finalización
+  //tfin=clock();
   high_resolution_clock::time_point end = high_resolution_clock::now();
   duration<double> tiempo = duration_cast<duration<double>>(end-start);
 

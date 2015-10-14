@@ -6,6 +6,6 @@ declare -i incremento=500
 declare -i i=$inicio
 sudo touch t_b_binaria.dat
 while(($i < $fin));do
-	echo `./ejercicio_desc $i  >> t_b_binaria.dat` 
+	echo `./ejercicio_desc $i  >> t_b_binaria_sorted.dat` 
 	let i+=$incremento
 done

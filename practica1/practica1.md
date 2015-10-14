@@ -350,3 +350,51 @@ g++ -o ejercicio_desc  ejercicio_desc.cpp -std=c++11
 se observan picos irregulares, la grafica tiene mucho ruido.
 eso esta debido a que el vector no esta ordenado. para solucionar este problema deberiamos ordenar el vector antes de aplicar la busqueda binaria.
 
+
+
+
+##Ejercicio 4: Mejor y peor caso
+###Retome el ejercicio de ordenación mediante el algoritmo de la burbuja. Debe modificar el código que genera los datos de entrada para situarnos en dos escenarios diferentes:
+
+####El mejor caso posible. Para este algoritmo, si la entrada es un vector que ya está ordenado el tiempo de cómputo es menor ya que no tiene que intercambiar ningún elemento.
+
+Para este caso basta con modificar el bucle que genera el vector como sigue:
+
+``` c++ 
+	for (int i=0; i<tam; i++) // Recorrer vector
+		v[i] = i;
+```
+
+Compilamos el cpp:
+
+```bash
+	g++ -o mejor_caso  mejor_caso.cpp -std=c++11
+```
+
+La grafica seria:
+
+![mejor]_caso](https://github.com/NAEL1/ED/blob/master/practica1/mejorcaso.png)
+
+####El peor caso posible. Si la entrada es un vector ordenado en orden inverso estaremos en la peor situación posible ya que en cada iteración del bucle interno hay que hacer un intercambio.
+
+Para este caso basta con modificar el bucle que genera el vector como sigue:
+
+``` c++ 
+	for (int i=0; i<tam; i++) // Recorrer vector
+		v[i] = tam-i-1;
+```
+
+Compilamos el cpp:
+
+```bash
+	g++ -o peor_caso  peor_caso.cpp -std=c++11
+```
+La grafica seria:
+
+![mejor]_caso](https://github.com/NAEL1/ED/blob/master/practica1/peorcaso.png)
+
+
+
+Finalmente comparando los datos obtenidos con los del ejercicio uno obtenemos la siguiente grafica
+
+![mejor]_caso](https://github.com/NAEL1/ED/blob/master/practica1/comparatica_burbuja.png)

@@ -1,5 +1,5 @@
 # Gnuplot script para calcular las eficiencias de la practica1
-# este archivo se carga en gnuplt usando el comando load'plot2.p'
+# este archivo se carga en gnuplt usando el comando load'plot.p'
 # @autor Nasrdine el houfi
 # @version V 1.1
 

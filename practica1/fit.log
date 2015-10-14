@@ -47,3 +47,49 @@ correlation matrix of the fit parameters:
 a               1.000 
 b              -0.968  1.000 
 c               0.738 -0.861  1.000 
+
+
+*******************************************************************************
+Wed Oct 14 17:22:31 2015
+
+
+FIT:    data read from 't_ordenacion.dat'
+        format = z
+        #datapoints = 60
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 5158.65           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 6.64088
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 26.4684
+rel. change during last iteration : -4.47473e-06
+
+degrees of freedom    (FIT_NDF)                        : 58
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.675538
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.456352
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.655549         +/- 0.08263      (12.6%)
+b               = -5.04548         +/- 0.7716       (15.29%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -0.994  1.000 
