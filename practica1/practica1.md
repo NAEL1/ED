@@ -373,7 +373,7 @@ Compilamos el cpp:
 
 La grafica seria:
 
-![mejor]_caso](https://github.com/NAEL1/ED/blob/master/practica1/mejorcaso.png)
+![mejor_caso](https://github.com/NAEL1/ED/blob/master/practica1/mejorcaso.png)
 
 ####El peor caso posible. Si la entrada es un vector ordenado en orden inverso estaremos en la peor situación posible ya que en cada iteración del bucle interno hay que hacer un intercambio.
 
@@ -391,10 +391,10 @@ Compilamos el cpp:
 ```
 La grafica seria:
 
-![mejor]_caso](https://github.com/NAEL1/ED/blob/master/practica1/peorcaso.png)
+![peor_caso](https://github.com/NAEL1/ED/blob/master/practica1/peorcaso.png)
 
 
 
 Finalmente comparando los datos obtenidos con los del ejercicio uno obtenemos la siguiente grafica
 
-![mejor]_caso](https://github.com/NAEL1/ED/blob/master/practica1/comparatica_burbuja.png)
+![comparativa](https://github.com/NAEL1/ED/blob/master/practica1/comparatica_burbuja.png)
