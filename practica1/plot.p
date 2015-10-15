@@ -66,8 +66,14 @@ set ylabel "Tiempo (seg)"
 #set output "comparativa_burbuja.png"
 #replot
 
-set title "Eficiencia nueva Burbuja"
-plot 't_nueva_burbuja.dat' with lines linecolor rgb "blue"
+#set title "Eficiencia nueva Burbuja"
+#plot 't_nueva_burbuja.dat' with lines linecolor rgb "blue"
+#set terminal png
+#set output "nueva_burbuja.png"
+#replot
+
+set title "Eficiencia ordenacion_optimizado vs ordenacion"
+plot 't_ordenacion_optimizado.dat' with lines linecolor rgb "red" title "ordenacion_optimizado",'t_ordenacion.dat' with line linecolor rgb "green" title "ordenacion_sin_optimizar" 
 set terminal png
-set output "nueva_burbuja.png"
+set output "ordenacion_optimizado vs ordenacion.png"
 replot

@@ -458,6 +458,8 @@ La grafica de la eficiencia empírica es:
 ###Retome el ejercicio de ordenación mediante el algoritmo de la burbuja. Ahora replique dicho ejercicio pero previamente deberá compilar el programa indicándole al compilador que optimice el código. Esto se consigue así:
 
 ```bash
-g++ -O3 ordenacion.cpp -o ordenacion_optimizado
+g++ -O3 ordenacion.cpp -o ordenacion_optimizado -std=c++11
 ```
 ####Compare las curvas de eficiencia empírica para ver cómo mejora esto la eficiencia del programa.
+
+![ordenacion_optimizado vs ordenacion](https://github.com/NAEL1/ED/blob/master/practica1/ordenacion_optimizado vs ordenacion.png)
