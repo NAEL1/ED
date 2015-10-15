@@ -463,3 +463,14 @@ g++ -O3 ordenacion.cpp -o ordenacion_optimizado -std=c++11
 ####Compare las curvas de eficiencia empírica para ver cómo mejora esto la eficiencia del programa.
 
 ![ordenacion_optimizado vs ordenacion](https://github.com/NAEL1/ED/blob/master/practica1/ordenacion_optimizado vs ordenacion.png)
+
+
+##Ejercicio 7: Multiplicación matricial
+
+###Implemente un programa que realice la multiplicación de dos matrices bidimensionales.Realice un análisis completo de la eficiencia tal y como ha hecho en ejercicios anteriores de este guión.
+
+
+
+##Ejercicio 8: Ordenación por Mezcla
+
+####Estudie el código del algoritmo recursivo disponible en el fichero mergesort.cpp. En él, se integran dos algoritmos de ordenación: inserción y mezcla (o mergesort). El parámetro UMBRAL_MS condiciona el tamaño mínimo del vector para utilizar el algoritmo de inserción en vez de seguir aplicando de forma recursiva el mergesort. Como ya habrá estudiado, la eficiencia teórica del mergesort es n log(n). Realice un análisis de la eficiencia empírica y haga el ajuste de ambas curvas. Incluya también, para este caso, un pequeño estudio de cómo afecta el parámetro UMBRAL_MS a la eficiencia del algoritmo. Para ello, pruebe distintos valores del mismo y analice los resultados obtenidos.
