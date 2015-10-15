@@ -43,7 +43,6 @@ int main(int argc, char * argv[]) {
 
 	high_resolution_clock::time_point start = high_resolution_clock::now();
 	ordenar(v,tam);
-
 	high_resolution_clock::time_point end = high_resolution_clock::now();
 	duration<double> tiempo = duration_cast<duration<double>>(end-start);
 	// Anotamos el tiempo de finalización

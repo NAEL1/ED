@@ -448,8 +448,16 @@ Compilamos el cpp:
 	g++ -o nueva_burbuja  nueva_burbuja.cpp -std=c++11
 ```
 
-La grafica de laeficiencia empírica es:
+La grafica de la eficiencia empírica es:
 
-nueva_burbuja
 
 ![nueva_burbuja](https://github.com/NAEL1/ED/blob/master/practica1/nueva_burbuja.png)
+
+##Ejercicio 6: Influencia del proceso de compilación
+
+###Retome el ejercicio de ordenación mediante el algoritmo de la burbuja. Ahora replique dicho ejercicio pero previamente deberá compilar el programa indicándole al compilador que optimice el código. Esto se consigue así:
+
+```bash
+g++ -O3 ordenacion.cpp -o ordenacion_optimizado
+```
+####Compare las curvas de eficiencia empírica para ver cómo mejora esto la eficiencia del programa.
