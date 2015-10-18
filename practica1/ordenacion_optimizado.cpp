@@ -7,16 +7,20 @@
 using namespace std;
 using namespace std::chrono;
 
+
 void ordenar(int *v, int n) {
-	for (int i=0; i<n-1; i++)
+	bool cambio=true;
+	for (int i=0; i<n-1 && cambio; i++) {
+	cambio=false;
 		for (int j=0; j<n-i-1; j++)
 			if (v[j]>v[j+1]) {
+				cambio=true;
 				int aux = v[j];
 				v[j] = v[j+1];
 				v[j+1] = aux;
-			}
+		}
+	}
 }
-
 void sintaxis() {
 	cerr << "Sintaxis:" << endl;
 	cerr << " TAM: Tamaño del vector (>0)" << endl;

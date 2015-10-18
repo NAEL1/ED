@@ -3,11 +3,10 @@
 #include <cstdlib>  // Para generación de números pseudoaleatorios
 #include <ratio>
 #include <chrono>
-
 using namespace std;
 using namespace std::chrono;
 
-void ordenar(int *v, int n) { // funcion de ordenacion burbuja
+/*void ordenar(int *v, int n) { // funcion de ordenacion burbuja
   for (int i=0; i<n-1; i++)
     for (int j=0; j<n-i-1; j++)
       if (v[j]>v[j+1]) {
@@ -16,7 +15,7 @@ void ordenar(int *v, int n) { // funcion de ordenacion burbuja
       v[j+1] = aux;
     }
 }
-
+*/
 int operacion(int *v, int n, int x, int inf, int sup) {
   int med;
   bool enc=false;
@@ -54,15 +53,15 @@ int main(int argc, char * argv[])
   // Generación del vector aleatorio
   int *v=new int[tam];       // Reserva de memoria
   srand(time(0));            // Inicialización del generador de números pseudoaleatorios
-  for (int i=0; i<tam; i++)  // Recorrer vector
+  /*for (int i=0; i<tam; i++)  // Recorrer vector
     v[i] = rand() % tam;
-  
   ordenar(v,tam); // ordenamos el vector
- 
+ */
   high_resolution_clock::time_point start = high_resolution_clock::now();
-  operacion(v,tam,tam+1,0,tam-1); // Algoritmo a evaluar
+  for(int i=0;i<1000 ; i++)
+    operacion(v,tam,tam+1,0,tam-1); // Algoritmo a evaluar
   high_resolution_clock::time_point end = high_resolution_clock::now();
-  duration<double> tiempo = duration_cast<duration<double>>(end-start);
+  duration<double> tiempo = duration_cast<duration<double>>(end-start)/1000.0;
 
   // Mostramos resultados
   cout << tam << "\t" << tiempo.count() << endl;

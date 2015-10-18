@@ -352,7 +352,11 @@ g++ -o ejercicio_desc  ejercicio_desc.cpp -std=c++11
 se observan picos irregulares, la grafica tiene mucho ruido.
 eso esta debido a que el vector no esta ordenado. para solucionar este problema deberiamos ordenar el vector antes de aplicar la busqueda binaria.
 
+busqueda_binaria
 
+![busqueda_binaria](https://github.com/NAEL1/ED/blob/master/practica1/busqueda_binaria.png)
+
+ Dado que el tiempo de ejecucion es muy pequeño aun se aprecian picos  aunque la grafica ha mejorado ya  excepcion de unos datos anomalos e puede apreciar una curva logaritmica,(los picos en este caso se deben a las condiciones incontrolables del test ya que los procesos secundarios de S.O. han podido intervenir)
 
 
 ##Ejercicio 4: Mejor y peor caso
@@ -401,6 +405,15 @@ La grafica seria:
 Finalmente comparando los datos obtenidos con los del ejercicio uno obtenemos la siguiente grafica
 
 ![comparativa](https://github.com/NAEL1/ED/blob/master/practica1/comparativa_burbuja.png)
+
+tal como se ve en la grafica el caso promedio parece mas lento que el peor caso ,sospecho que es debido a la optimizacon que hace el g++ detecta que se trata de un vector ordenado inversamente y le da la vuelta  esto es debedo a que la opcion(implicta) por defecto es -O1,por lo que g++ somete el codigo a una optimoacion de nivel 1.
+asi que voy a repetir las mediciones poniendo explicitamente la opcion -O0 para que el g++ no optimice el codigo.
+
+```bash
+	g++ -O0 -o ordenacion ordenacion.cpp -std=c++11
+	g++ -O0 -o mejor_caso  mejor_caso.cpp -std=c++11
+	g++ -O0 -o peor_caso  peor_caso.cpp -std=c++11
+```
 
 ##Ejercicio 5: Dependencia de la implementación
 
@@ -464,13 +477,4 @@ g++ -O3 ordenacion.cpp -o ordenacion_optimizado -std=c++11
 
 ![ordenacion_optimizado vs ordenacion](https://github.com/NAEL1/ED/blob/master/practica1/ordenacion_optimizado vs ordenacion.png)
 
-
-##Ejercicio 7: Multiplicación matricial
-
-###Implemente un programa que realice la multiplicación de dos matrices bidimensionales.Realice un análisis completo de la eficiencia tal y como ha hecho en ejercicios anteriores de este guión.
-
-
-
-##Ejercicio 8: Ordenación por Mezcla
-
-####Estudie el código del algoritmo recursivo disponible en el fichero mergesort.cpp. En él, se integran dos algoritmos de ordenación: inserción y mezcla (o mergesort). El parámetro UMBRAL_MS condiciona el tamaño mínimo del vector para utilizar el algoritmo de inserción en vez de seguir aplicando de forma recursiva el mergesort. Como ya habrá estudiado, la eficiencia teórica del mergesort es n log(n). Realice un análisis de la eficiencia empírica y haga el ajuste de ambas curvas. Incluya también, para este caso, un pequeño estudio de cómo afecta el parámetro UMBRAL_MS a la eficiencia del algoritmo. Para ello, pruebe distintos valores del mismo y analice los resultados obtenidos.
+1

@@ -15,7 +15,7 @@ unset label
 set xlabel "Tamanio"
 set ylabel "Tiempo (seg)"
 #set title "Eficiencia Burbuja"
-#
+
 #plot 't_ordenacion.dat' with lines linecolor rgb "blue"
 
 #set terminal png
@@ -48,16 +48,32 @@ set ylabel "Tiempo (seg)"
 
 
 #set title "burbuja_mejor_caso"
-
 #plot 't_mejorcaso.dat' with lines linecolor rgb "green" title "mejor_caso"
 #set terminal png
 #set output "mejorcaso.png"
+#replot
 
-#plot 'Datos_insercion.dat' with lines linecolor rgb "blue"
 
 
 #set title "burbuja_peor_caso"
-
-#plot 't_peorcaso.dat' with lines linecolor rgb "green" title "mejor_caso"
+#plot 't_peorcaso.dat' with lines linecolor rgb "red" title "peor_caso"
 #set terminal png
 #set output "peorcaso.png"
+#replot
+
+#plot 't_ordenacion.dat'with lines linecolor rgb "blue" title "caso_normal" ,'t_peorcaso.dat' with lines linecolor rgb "red" title "peor_caso", 't_mejorcaso.dat' with lines linecolor rgb "green" title "mejor_caso"
+#set terminal png
+#set output "comparativa_burbuja.png"
+#replot
+
+#set title "Eficiencia nueva Burbuja"
+#plot 't_nueva_burbuja.dat' with lines linecolor rgb "blue"
+#set terminal png
+#set output "nueva_burbuja.png"
+#replot
+
+set title "Eficiencia ordenacion_optimizado vs ordenacion"
+plot 't_ordenacion_optimizado.dat' with lines linecolor rgb "red" title "ordenacion_optimizado",'t_ordenacion.dat' with line linecolor rgb "green" title "ordenacion_sin_optimizar" 
+set terminal png
+set output "ordenacion_optimizado vs ordenacion.png"
+replot

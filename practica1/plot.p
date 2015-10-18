@@ -8,7 +8,7 @@ unset log                              # remove any log-scaling
 unset label                            # remove any previous labels
 set xtic auto                          # set xtics automatically
 set ytic auto                          # set ytics automatically
-set xrange [100:30000]
+#set xrange [100:30000]
 
 #Generamos graficos de burbuja
 unset label
@@ -72,8 +72,14 @@ set ylabel "Tiempo (seg)"
 #set output "nueva_burbuja.png"
 #replot
 
-set title "Eficiencia ordenacion_optimizado vs ordenacion"
-plot 't_ordenacion_optimizado.dat' with lines linecolor rgb "red" title "ordenacion_optimizado",'t_ordenacion.dat' with line linecolor rgb "green" title "ordenacion_sin_optimizar" 
+#set title "Eficiencia ordenacion_optimizado vs ordenacion"
+#plot 't_ordenacion_optimizado.dat' with lines linecolor rgb "red" title "ordenacion_optimizado",'t_ordenacion.dat' with line linecolor rgb "green" title "ordenacion_sin_optimizar" 
+#set terminal png
+#set output "ordenacion_optimizado vs ordenacion.png"
+#replot
+
+set  title "Eficiencia del Algoritmo de busqueda binaria"
+plot 't_b_binaria_sorted.dat' with lines linecolor rgb "blue" title "busqueda binaria" 
 set terminal png
-set output "ordenacion_optimizado vs ordenacion.png"
+set output "busqueda_binaria.png"
 replot
