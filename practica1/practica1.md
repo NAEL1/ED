@@ -352,7 +352,6 @@ g++ -o ejercicio_desc  ejercicio_desc.cpp -std=c++11
 se observan picos irregulares, la grafica tiene mucho ruido.
 eso esta debido a que el vector no esta ordenado. para solucionar este problema deberiamos ordenar el vector antes de aplicar la busqueda binaria.
 
-busqueda_binaria
 
 ![busqueda_binaria](https://github.com/NAEL1/ED/blob/master/practica1/busqueda_binaria.png)
 
@@ -414,6 +413,7 @@ asi que voy a repetir las mediciones poniendo explicitamente la opcion -O0 para 
 	g++ -O0 -o mejor_caso  mejor_caso.cpp -std=c++11
 	g++ -O0 -o peor_caso  peor_caso.cpp -std=c++11
 ```
+![comparativa_burbuja_2](https://github.com/NAEL1/ED/blob/master/practica1/comparativa_burbuja_2.png)
 
 ##Ejercicio 5: Dependencia de la implementación
 
@@ -477,4 +477,3 @@ g++ -O3 ordenacion.cpp -o ordenacion_optimizado -std=c++11
 
 ![ordenacion_optimizado vs ordenacion](https://github.com/NAEL1/ED/blob/master/practica1/ordenacion_optimizado vs ordenacion.png)
 
-1

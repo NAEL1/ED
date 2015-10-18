@@ -61,10 +61,10 @@ set ylabel "Tiempo (seg)"
 #set output "peorcaso.png"
 #replot
 
-#plot 't_ordenacion.dat'with lines linecolor rgb "blue" title "caso_normal" ,'t_peorcaso.dat' with lines linecolor rgb "red" title "peor_caso", 't_mejorcaso.dat' with lines linecolor rgb "green" title "mejor_caso"
-#set terminal png
-#set output "comparativa_burbuja.png"
-#replot
+plot 't_ordenacion.dat'with lines linecolor rgb "blue" title "caso_normal" ,'t_peorcaso.dat' with lines linecolor rgb "red" title "peor_caso", 't_mejorcaso.dat' with lines linecolor rgb "green" title "mejor_caso"
+set terminal png
+set output "comparativa_burbuja_2.png"
+replot
 
 #set title "Eficiencia nueva Burbuja"
 #plot 't_nueva_burbuja.dat' with lines linecolor rgb "blue"
@@ -78,8 +78,8 @@ set ylabel "Tiempo (seg)"
 #set output "ordenacion_optimizado vs ordenacion.png"
 #replot
 
-set  title "Eficiencia del Algoritmo de busqueda binaria"
-plot 't_b_binaria_sorted.dat' with lines linecolor rgb "blue" title "busqueda binaria" 
-set terminal png
-set output "busqueda_binaria.png"
-replot
+#set  title "Eficiencia del Algoritmo de busqueda binaria"
+#plot 't_b_binaria_sorted.dat' with lines linecolor rgb "blue" title "busqueda binaria" 
+#set terminal png
+#set output "busqueda_binaria.png"
+#replot
